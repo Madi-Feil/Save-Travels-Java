@@ -33,7 +33,7 @@ public class MainController {
 	}
 	@GetMapping("/edit/{id}")
 	public String edit(@PathVariable("id") Long id, Model model) {
-		model.addAttribute("expenses", expenses.find(id));
+		model.addAttribute("expense", expenses.find(id));
 		model.addAttribute("expenses", expenses.all());
 		return "edit.jsp";
 	}
